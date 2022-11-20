@@ -7,6 +7,7 @@ To run this, simply execute main.py script:
 python main.py
 
 Logging function:
+Log file: commandHistory.txt
 logger.py is a separate script that handles logging of commands executed on main script. 
 Main.py has a loggerFn function that got 2 inputs - script and arguments.
 loggerFn function needs to be added to every command in order to log the activity.
