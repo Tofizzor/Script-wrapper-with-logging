@@ -2,6 +2,7 @@
 
 import sys, getopt
 
+#Example script with two arguments available -f -l
 
 def main(argv):
     inputfile = ''

@@ -7,12 +7,16 @@ import getopt, sys, logging, getpass
 #print("Env thinks the user is " + os.getlogin())
 #print("Effective user is " + getpass.getuser())
 
-
+#Help message in case wrong input was added when running the script
 def usage():
   print("Usage: logger.py -c <CommandName> -a <CommandArguments>")
 
 def main():
     try:
+        #Takes arguments inputed when running the script
+        #Currently -h -a -s are only supported
+        #Adding new argument e.g. -z would require to change "ha:s:"
+        #to "ha:s:z:" in order to pick up new argument
         opts, args = getopt.getopt(sys.argv[1:], "ha:s:", ["argument=", "script="])
     except getopt.GetoptError as err:
         # print help information and exit:
@@ -20,7 +24,7 @@ def main():
         usage()
         sys.exit(2)
     arguments = ""
-    script = "Did not pick up any input"
+    script = ""
     for o, a in opts:
         if o in ("-h", "--help"):
             usage()

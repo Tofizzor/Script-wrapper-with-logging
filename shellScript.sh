@@ -1,4 +1,4 @@
 #!/bin/bash
-# Print Hello world message
+# Simple shell script to print hello world message
 echo "Hello World!"
 echo "This is a shell script."

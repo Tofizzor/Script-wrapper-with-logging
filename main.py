@@ -6,6 +6,7 @@ ans=True
 newMenu=False
 question="What would you like to do? \n"
 
+#Function that calls logger.py script which logs the activity in a txt file
 def loggerFn(script,arguments = ""):
   if script != "":
     script = ' -s ' + script
@@ -35,7 +36,7 @@ while ans:
         print("No last name entered.") 
       else:
         ans2=" -l " + ans2   
-      #subprocess.call(["python", "inputYourName.py"])
+      #subprocess.call(["python", "inputYourName.py"]) #different method of capturing users name/ID
       subprocess.call(" python inputYourName.py" + ans1 + ans2, shell=True)
       loggerFn("inputYourName.py", ans1 + ans2)
     elif ans=="2":
